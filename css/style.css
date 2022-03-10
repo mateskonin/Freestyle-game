@@ -1,0 +1,674 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Lato:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+@-webkit-keyframes lightening {
+  10% {
+    color: #383000;
+  }
+  25% {
+    color: #383000;
+  }
+  30% {
+    color: gold;
+  }
+  32% {
+    color: #383000;
+  }
+  34% {
+    color: gold;
+  }
+  40% {
+    color: #383000;
+  }
+  100% {
+    color: #383000;
+  }
+}
+
+@keyframes lightening {
+  10% {
+    color: #383000;
+  }
+  25% {
+    color: #383000;
+  }
+  30% {
+    color: gold;
+  }
+  32% {
+    color: #383000;
+  }
+  34% {
+    color: gold;
+  }
+  40% {
+    color: #383000;
+  }
+  100% {
+    color: #383000;
+  }
+}
+
+.container {
+  position: relative;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: #131313;
+  overflow: hidden;
+  -webkit-transition: left 1.5s;
+  transition: left 1.5s;
+}
+
+.container .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container .background-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+  z-index: 11;
+}
+
+.container .background-sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .background-sign p {
+  font-size: 8rem;
+  font-family: 'Comforter', cursive;
+  font-weight: bold;
+  color: #383000;
+}
+
+.container .background-sign p:nth-child(even) {
+  color: #474747;
+}
+
+.container .background-panel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  -webkit-transition: bottom 1.5s linear;
+  transition: bottom 1.5s linear;
+  z-index: 10;
+}
+
+.container .background-panel.active {
+  bottom: -40%;
+}
+
+.container .background-button {
+  position: absolute;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 70px;
+  height: 50px;
+  background-color: #383000;
+  cursor: pointer;
+  z-index: 10000;
+  display: none;
+}
+
+.container .background-button i {
+  font-size: 2rem;
+  color: white;
+  display: none;
+}
+
+.container .background-buttons-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .background-buttons-box .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: gold 2px solid;
+  cursor: pointer;
+  background-color: #000;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .background-buttons-box .btn-music {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.container .background-buttons-box .btn-music .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  -webkit-transition: font-size 0.3s;
+  transition: font-size 0.3s;
+}
+
+.container .background-buttons-box .btn-music p {
+  position: absolute;
+  top: 50%;
+  right: -120%;
+  padding: 5px 10px;
+  border: 2px solid gold;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+}
+
+.container .background-buttons-box .btn img {
+  width: 70%;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.container .background-buttons-box .btn:hover {
+  -webkit-box-shadow: 0px 0px 25px white;
+          box-shadow: 0px 0px 25px white;
+}
+
+.container .background-buttons-box .btn:hover .fas {
+  font-size: 1.2rem;
+}
+
+.container .background-buttons-box .btn:hover img {
+  width: 80%;
+}
+
+.container .background-title {
+  /* Oryginalne */
+  position: absolute;
+  top: 190px;
+  right: 0;
+  padding: 20px 40px;
+  width: 800px;
+  font-size: 3rem;
+  font-family: 'Comforter', cursive;
+  color: white;
+  background-color: black;
+  text-align: center;
+  -webkit-transform: rotate(45deg) translateX(50%);
+          transform: rotate(45deg) translateX(50%);
+  -webkit-transform-origin: 100% -180%;
+          transform-origin: 100% -180%;
+  z-index: 10;
+  z-index: 10;
+}
+
+.container .background-title span {
+  color: gold;
+  font-family: 'Comforter', cursive;
+}
+
+.container .background-game {
+  position: absolute;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: left 1.5s linear;
+  transition: left 1.5s linear;
+  z-index: 7;
+}
+
+.container .background-game.active {
+  left: -100%;
+}
+
+.container .background-game .video-puzzle {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .background-game .item-place {
+  height: 50%;
+  width: 50%;
+  opacity: 0.95;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.container .background-game .item-place.active {
+  opacity: 0;
+}
+
+.container .background-game .item-place img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .background-game .item-place.one {
+  background-color: #d02;
+}
+
+.container .background-game .item-place.two {
+  background-color: #a88e92;
+}
+
+.container .background-game .item-place.three {
+  background-color: #147514;
+}
+
+.container .background-game .item-place.four {
+  background-color: #302597;
+}
+
+.container .background-game .chose-panel {
+  position: absolute;
+  left: 25%;
+  bottom: 50px;
+  width: 50%;
+}
+
+.container .background-game .chose-panel .title-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+  font-family: 'Comforter', cursive;
+  color: gold;
+  color: white;
+}
+
+.container .background-game .chose-panel .items-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: gold;
+  height: 100px;
+}
+
+.container .background-game .chose-panel .item-puzzle {
+  width: 25%;
+  height: calc(100% - 10px);
+  border: black 5px solid;
+  margin: 5px 0 0 5px;
+}
+
+.container .background-game .chose-panel .item-puzzle.four {
+  margin-right: 5px;
+}
+
+.container .background-game .chose-panel .item-puzzle img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .background-game-second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
+.container .background-game-second .keys-panel {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: auto;
+  width: 250px;
+  font-size: 2.4rem;
+}
+
+.container .background-game-second .keys-panel .panel-title,
+.container .background-game-second .keys-panel .panel-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Comforter', cursive;
+  margin-top: 10px;
+}
+
+.container .background-game-second .keys-panel .panel-title.active,
+.container .background-game-second .keys-panel .panel-elements.active {
+  color: gold;
+}
+
+.container .background-game-second .keys-panel .panel-title {
+  color: white;
+}
+
+.container .background-game-second .keys-panel .fas {
+  color: white;
+}
+
+.container .background-game-second .keys-panel .color {
+  color: gold;
+}
+
+.container .background-game-second .keys-panel .color-stay {
+  color: gold;
+}
+
+.container .background-game-second video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .background-video {
+  position: absolute;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: left 1.5s linear;
+  transition: left 1.5s linear;
+  z-index: 9;
+}
+
+.container .background-video.active {
+  left: -100%;
+}
+
+.container .background-main {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 80%;
+  height: 100%;
+  -webkit-transition: left 1.5s linear;
+  transition: left 1.5s linear;
+}
+
+.container .card {
+  position: absolute;
+  left: calc(20% - 150px);
+  width: 300px;
+  height: 400px;
+  background: #232323;
+  border-radius: 20px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-box-shadow .5s;
+  transition: -webkit-box-shadow .5s;
+  transition: box-shadow .5s;
+  transition: box-shadow .5s, -webkit-box-shadow .5s;
+  z-index: 12;
+}
+
+.container .card-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background: white;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: 10;
+  -webkit-transform: translate3d(-50%, -50%, 50px);
+          transform: translate3d(-50%, -50%, 50px);
+  opacity: 1;
+}
+
+.container .card-picture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* max-width: 150px; */
+  width: 200px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 110;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 150px) rotate(25deg);
+          transform: translate3d(-50%, -50%, 150px) rotate(25deg);
+}
+
+.container .card-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 75px);
+          transform: translate3d(0, 0, 75px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.container .card-play {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, 0, 75px);
+          transform: translate3d(-50%, 0, 75px);
+  color: #fff;
+  background: #333;
+  padding: 10px 25px;
+  border: gold 2px solid;
+  border-radius: 30px;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 1.5rem;
+  /* opacity: 0; */
+  z-index: 10;
+}
+
+.container .card::before {
+  content: 'FREESTYLE';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container .card::after {
+  content: 'FOOTBALL';
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container .card:hover::before,
+.container .card:hover::after {
+  opacity: 0.04;
+}
+
+.container .card:hover {
+  -webkit-box-shadow: 5px 5px 10px gold, -5px -5px 10px gold;
+          box-shadow: 5px 5px 10px gold, -5px -5px 10px gold;
+}
+
+.container .card:hover .card-name {
+  top: 40px;
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .container .background-title {
+    top: 140px;
+    font-size: 2rem;
+  }
+  .container .background-sign p,
+  .container .background-sign span {
+    font-size: 5rem;
+  }
+  .container .card {
+    left: calc(20% - 105px);
+    width: 210px;
+    height: 280px;
+  }
+  .container .card-play {
+    font-size: 1.1rem;
+    padding: 7px 14px;
+  }
+  .container .card-picture {
+    width: 150px;
+  }
+  .container .card:hover::before,
+  .container .card:hover::after {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container .background-sign p,
+  .container .background-sign span {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container .background-side {
+    z-index: -5;
+  }
+  .container .background-sign p,
+  .container .background-sign span {
+    display: none;
+  }
+  .container .background-main {
+    left: 0;
+    width: 100%;
+  }
+  .container .background-title {
+    top: 0;
+    font-size: 2rem;
+    padding: 20px;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    width: 100%;
+  }
+  .container .background-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: gold;
+  }
+  .container .background-button i {
+    display: block;
+  }
+  .container .background-game .chose-panel {
+    left: 0;
+    width: 100%;
+  }
+  .container .card {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

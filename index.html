@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freestyle Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="background">
+            <h1 class="background-title">Fr<span>ee</span>style <span>F</span>ootball</h1>
+            <div class="background-side">
+
+                <div class="background-sign">
+                    <p>Freestyle</p>
+                    <p>Football</p>
+                    <p>Freestyle</p>
+                    <p>Football</p>
+                    <p>Freestyle</p>
+                    <p>Football</p>
+                    <p>Freestyle</p>
+                    <p>Football</p>
+                    <!-- <p>Football</p> -->
+
+                </div>
+            </div>
+            <div class="background-button">
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="background-main">
+
+                <video class="background-video" src="img/movie-bg.m4v" autoplay="autoplay" muted loop></video>
+
+                <div class="background-game">
+                    <video src="img/movie-game1.mp4" class="video-puzzle" muted loop></video>
+                    <!-- <video src="img/Bez tytułu.avi" class="background-video" autoplay="autoplay" muted loop></video> -->
+
+                    <div class="item-place one drop-zone"></div>
+                    <div class="item-place two drop-zone"></div>
+                    <div class="item-place three drop-zone"></div>
+                    <div class="item-place four drop-zone"></div>
+                    <div class="chose-panel">
+                        <div class="title-panel">Drag and drop</div>
+                        <div class="items-panel">
+                            <div class="item-puzzle one drop-zone">
+                                <img src="img/puzzle1.jpg" id="myDraggableElement1" draggable="true" alt="puzzle1">
+                            </div>
+                            <div class="item-puzzle two drop-zone">
+                                <img src="img/puzzle2.jpg" id="myDraggableElement2" draggable="true" alt="puzzle2">
+                            </div>
+                            <div class="item-puzzle three drop-zone">
+                                <img src="img/puzzle3.jpg" id="myDraggableElement3" draggable="true" alt="puzzle3">
+                            </div>
+                            <div class="item-puzzle four drop-zone">
+                                <img src="img/puzzle4.jpg" id="myDraggableElement4" draggable="true" alt="puzzle4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="background-game-second">
+                    <video class="video-keys" src="img/movie-game2.mp4" muted loop></video>
+                    <div class="keys-panel">
+                        <p class="panel-title">Tap keys on keyboard</p>
+                        <p class="panel-elements">
+                            <i class="fas fa-arrow-circle-up"></i>
+                            <i class="fas fa-arrow-circle-right"></i>
+                            <i class="fas fa-arrow-circle-down"></i>
+                            <i class="fas fa-arrow-circle-left"></i>
+                            <i class="fas fa-registered"></i>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="background-panel">
+
+                <div class="background-buttons-box">
+                    <audio src="music/music.mp3" loop></audio>
+                    <div class="btn btn-slow"><img src="img/Slice 2.png" alt="Ikona żółw"></div>
+                    <div class="btn btn-fast"><img src="img/Slice 1.png" alt="Ikona królik"></div>
+
+                    <div class="btn btn-music">
+                        <i class="fas fa-play"></i>
+                        <p>Music</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="card-name">Live your game</h2>
+            <a href="#" class="card-play">Play now</a>
+            <div class="card-circle"></div>
+            <img src="img/caf.png" class="card-picture" alt="ball">
+        </div>
+    </div>
+
+    <script src="js/vanilla-tilt.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
